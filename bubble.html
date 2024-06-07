@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #item-2{
+            border: 2px solid red;
+        }
+        ul{
+            border: 2px solid green;
+        }
+        body{
+            border: 2px solid blue;
+        }
+        section{
+            border: 2px solid purple;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exploring Event Bubble</h1>
+    <section>
+        <ul id="ul-item">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Nam, placeat.</li>
+            <li id="item-3">Tenetur, expedita.</li>
+            <li id="item-4">A, rem.</li>
+            <li id="item-5">Est, alias.</li>
+            <li id="item-6">Recusandae, totam.</li>
+        </ul>
+    </section>
+
+    <script>
+        document.getElementById('item-2').addEventListener('click', function(){
+            console.log('Nam Placeat')
+        })
+
+        document.getElementById('item-4').addEventListener('click', function(){
+            console.log('Arem id')
+        })
+
+        document.getElementById('ul-item').addEventListener('click', function(){
+            console.log('ul item')
+        })
+    </script>
+</body>
+</html>
